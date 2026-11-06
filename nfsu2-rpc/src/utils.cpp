@@ -18,7 +18,7 @@ void makeCall(int at, void* to) {
   VirtualProtect((LPVOID)at, 5, PAGE_EXECUTE_READWRITE, &oldvp);
 
   *((unsigned char*)at) = 0xE8;
-  *((int*)++at) = (int)to - (at + 4);
+  *((int*)(at + 1)) = (int)to - (at + 5);
 
   VirtualProtect((LPVOID)at, 5, oldvp, &oldvp);
 }
@@ -46,7 +46,7 @@ json buildLangJsonObj(HMODULE hModule, LPWSTR lpName) {
   json langJson = json::parse((char*)memRes);
 
   wstring langPackPath = getModulePath(hModule) + LANG_PACK_FILENAME;
-  ifstream langPackFile(langPackPath);
+  ifstream langPackFile(langPackPath.c_str());
 
   if (langPackFile) {
     json langPackJson;

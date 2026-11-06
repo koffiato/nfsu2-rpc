@@ -103,6 +103,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\discord_presence.cpp" />
     <ClCompile Include="src\lang.cpp" />
     <ClCompile Include="lib\discord\achievement_manager.cpp" />
     <ClCompile Include="lib\discord\activity_manager.cpp" />
@@ -122,6 +123,7 @@
     <ClCompile Include="src\utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\discord_presence.h" />
     <ClInclude Include="src\lang.h" />
     <ClInclude Include="lib\discord\achievement_manager.h" />
     <ClInclude Include="lib\discord\activity_manager.h" />

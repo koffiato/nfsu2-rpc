@@ -2,7 +2,7 @@
 
 A mod that adds Discord Rich Presence integration to Need for Speed: Underground 2
 
-<img src="assets/presence.png">  
+<img src="assets/presence.png">
 
 ## Installation
 
@@ -14,7 +14,12 @@ A mod that adds Discord Rich Presence integration to Need for Speed: Underground
 
 Check the [documentation](/docs/customization.md)
 
+## Fork Info
+
+This fork changes how startup and Discord connections are handled. Mainly effecting startup, where it won't start Discord up if it's not already running.
+
 ## Credits
 
 - Logo by [TripleZet](https://www.deviantart.com/triplezet)
 - Thanks to [yugecin](https://github.com/yugecin) for reverse engineering the language system
+- Fork includes AI work.
